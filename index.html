@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SonicProof - Protection Audio Professionnelle</title>
+    <title>À propos - SonicProof</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -23,28 +25,7 @@
                             800: '#3730a3',
                             900: '#312e81',
                             950: '#1e1b4b',
-                        },
-                        secondary: {
-                            50: '#f8fafc',
-                            100: '#f1f5f9',
-                            200: '#e2e8f0',
-                            300: '#cbd5e1',
-                            400: '#94a3b8',
-                            500: '#64748b',
-                            600: '#475569',
-                            700: '#334155',
-                            800: '#1e293b',
-                            900: '#0f172a',
-                            950: '#020617',
-                        },
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    animation: {
-                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'bounce-slow': 'bounce 2s infinite',
+                        }
                     }
                 }
             }
@@ -52,702 +33,800 @@
     </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
-
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            transition: all 0.2s ease;
         }
 
         body {
             font-family: 'Inter', sans-serif;
-            min-height: 100vh;
-            background-color: #f8fafc;
+            line-height: 1.6;
         }
 
-        .wave-bg {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='600' y1='25' x2='600' y2='777'%3E%3Cstop offset='0' stop-color='%234338ca'/%3E%3Cstop offset='1' stop-color='%230f172a'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='650' y1='25' x2='650' y2='777'%3E%3Cstop offset='0' stop-color='%234635c5'/%3E%3Cstop offset='1' stop-color='%23111a30'/%3E%3C/linearGradient%3E%3ClinearGradient id='c' gradientUnits='userSpaceOnUse' x1='700' y1='25' x2='700' y2='777'%3E%3Cstop offset='0' stop-color='%234932bf'/%3E%3Cstop offset='1' stop-color='%23131d36'/%3E%3C/linearGradient%3E%3ClinearGradient id='d' gradientUnits='userSpaceOnUse' x1='750' y1='25' x2='750' y2='777'%3E%3Cstop offset='0' stop-color='%234c30ba'/%3E%3Cstop offset='1' stop-color='%2315203c'/%3E%3C/linearGradient%3E%3ClinearGradient id='e' gradientUnits='userSpaceOnUse' x1='800' y1='25' x2='800' y2='777'%3E%3Cstop offset='0' stop-color='%234f2db4'/%3E%3Cstop offset='1' stop-color='%23172342'/%3E%3C/linearGradient%3E%3ClinearGradient id='f' gradientUnits='userSpaceOnUse' x1='850' y1='25' x2='850' y2='777'%3E%3Cstop offset='0' stop-color='%23522aaf'/%3E%3Cstop offset='1' stop-color='%23192648'/%3E%3C/linearGradient%3E%3ClinearGradient id='g' gradientUnits='userSpaceOnUse' x1='900' y1='25' x2='900' y2='777'%3E%3Cstop offset='0' stop-color='%235526a9'/%3E%3Cstop offset='1' stop-color='%231a294e'/%3E%3C/linearGradient%3E%3ClinearGradient id='h' gradientUnits='userSpaceOnUse' x1='950' y1='25' x2='950' y2='777'%3E%3Cstop offset='0' stop-color='%235723a3'/%3E%3Cstop offset='1' stop-color='%231c2c54'/%3E%3C/linearGradient%3E%3ClinearGradient id='i' gradientUnits='userSpaceOnUse' x1='1000' y1='25' x2='1000' y2='777'%3E%3Cstop offset='0' stop-color='%235a1f9e'/%3E%3Cstop offset='1' stop-color='%231e2f5a'/%3E%3C/linearGradient%3E%3ClinearGradient id='j' gradientUnits='userSpaceOnUse' x1='1050' y1='25' x2='1050' y2='777'%3E%3Cstop offset='0' stop-color='%235c1b98'/%3E%3Cstop offset='1' stop-color='%2320325f'/%3E%3C/linearGradient%3E%3ClinearGradient id='k' gradientUnits='userSpaceOnUse' x1='1100' y1='25' x2='1100' y2='777'%3E%3Cstop offset='0' stop-color='%235e1692'/%3E%3Cstop offset='1' stop-color='%23223565'/%3E%3C/linearGradient%3E%3ClinearGradient id='l' gradientUnits='userSpaceOnUse' x1='1150' y1='25' x2='1150' y2='777'%3E%3Cstop offset='0' stop-color='%235f108c'/%3E%3Cstop offset='1' stop-color='%2324386b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill-opacity='0.5'%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' x='100' width='1100' height='800'/%3E%3Crect fill='url(%23c)' x='200' width='1000' height='800'/%3E%3Crect fill='url(%23d)' x='300' width='900' height='800'/%3E%3Crect fill='url(%23e)' x='400' width='800' height='800'/%3E%3Crect fill='url(%23f)' x='500' width='700' height='800'/%3E%3Crect fill='url(%23g)' x='600' width='600' height='800'/%3E%3Crect fill='url(%23h)' x='700' width='500' height='800'/%3E%3Crect fill='url(%23i)' x='800' width='400' height='800'/%3E%3Crect fill='url(%23j)' x='900' width='300' height='800'/%3E%3Crect fill='url(%23k)' x='1000' width='200' height='800'/%3E%3Crect fill='url(%23l)' x='1100' width='100' height='800'/%3E%3C/g%3E%3C/svg%3E");
-            background-size: cover;
-            background-position: center;
+        .hero-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            overflow: hidden;
         }
 
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes slideIn {
-            from { transform: translateY(-20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-
-        @keyframes shimmer {
-            0% { background-position: -1000px 0; }
-            100% { background-position: 1000px 0; }
-        }
-
-        .shimmer {
-            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
-            background-size: 1000px 100%;
-            animation: shimmer 2s infinite;
-        }
-
-        .animate-fadeIn { animation: fadeIn 0.6s ease-out forwards; }
-        .animate-slideIn { animation: slideIn 0.4s ease-out forwards; }
-        .animate-pulse { animation: pulse 2s infinite; }
-
-        /* Scrollbar Styling */
-        ::-webkit-scrollbar {
-            width: 8px;
-            height: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #f1f5f9;
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8;
-        }
-
-        /* Custom File Input */
-        .file-drop-area input[type="file"] {
+        .hero-bg::before {
+            content: '';
             position: absolute;
-            left: -9999px;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+            animation: float 20s ease-in-out infinite;
         }
 
-        /* Progress Bar Animation */
-        .progress-fill {
-            transition: width 0.5s ease;
-            background: linear-gradient(90deg, #4f46e5, #3730a3);
-            background-size: 200% 100%;
-            animation: gradientShift 2s ease infinite;
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(180deg); }
         }
 
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        .tech-card {
+            transition: all 0.3s ease;
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
 
-        /* Audio Wave Animation */
-        .audio-wave {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 40px;
+        .tech-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
 
-        .audio-wave span {
-            display: inline-block;
-            width: 3px;
+        .floating-element {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .wave-animation {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .wave-animation::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
             height: 100%;
-            margin: 0 2px;
-            background-color: #4f46e5;
-            border-radius: 3px;
-            animation: wave 1.2s infinite ease-in-out;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: wave 2s infinite;
         }
 
         @keyframes wave {
-            0%, 100% { transform: scaleY(0.3); }
-            50% { transform: scaleY(1); }
+            0% { left: -100%; }
+            100% { left: 100%; }
         }
 
-        .audio-wave span:nth-child(2) { animation-delay: 0.1s; }
-        .audio-wave span:nth-child(3) { animation-delay: 0.2s; }
-        .audio-wave span:nth-child(4) { animation-delay: 0.3s; }
-        .audio-wave span:nth-child(5) { animation-delay: 0.4s; }
-        .audio-wave span:nth-child(6) { animation-delay: 0.5s; }
-        .audio-wave span:nth-child(7) { animation-delay: 0.6s; }
-        .audio-wave span:nth-child(8) { animation-delay: 0.7s; }
+        .pulse-animation {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .tech-icon {
+            transition: all 0.3s ease;
+        }
+
+        .tech-card:hover .tech-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #4f46e5;
+            border: 4px solid white;
+            box-shadow: 0 0 0 4px #4f46e5;
+        }
+
+        .stats-counter {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #4f46e5;
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            margin: 0 auto 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1);
+            box-shadow: 0 20px 40px rgba(79, 70, 229, 0.3);
+        }
+
+        .team-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(79, 70, 229, 0.1), transparent);
+            transition: all 0.5s ease;
+        }
+
+        .team-card:hover::before {
+            left: 100%;
+        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
-    <div class="min-h-screen flex flex-col">
-        <!-- Header with Wave Background -->
-        <header class="wave-bg text-white py-6 md:py-12 relative overflow-hidden">
-            <div class="container mx-auto px-4 md:px-6 relative z-10">
-                <div class="flex flex-col md:flex-row items-center justify-between">
-                    <div class="mb-6 md:mb-0 flex items-center">
-                        <div class="mr-3 bg-white/10 p-2 rounded-lg">
-                            <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM7 13.5C6.17 13.5 5.5 12.83 5.5 12C5.5 11.17 6.17 10.5 7 10.5C7.83 10.5 8.5 11.17 8.5 12C8.5 12.83 7.83 13.5 7 13.5ZM12 13.5C11.17 13.5 10.5 12.83 10.5 12C10.5 11.17 11.17 10.5 12 10.5C12.83 10.5 13.5 11.17 13.5 12C13.5 12.83 12.83 13.5 12 13.5ZM17 13.5C16.17 13.5 15.5 12.83 15.5 12C15.5 11.17 16.17 10.5 17 10.5C17.83 10.5 18.5 11.17 18.5 12C18.5 12.83 17.83 13.5 17 13.5Z" fill="currentColor"/>
-                                <path d="M12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22ZM12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4Z" fill="currentColor" fill-opacity="0.3"/>
-                            </svg>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white mr-3">
+                            <i class="fas fa-shield-alt"></i>
                         </div>
-                        <div>
-                            <h1 class="text-2xl md:text-3xl font-bold tracking-tight">Sonic<span class="text-indigo-300">Proof</span></h1>
-                            <p class="text-xs md:text-sm text-indigo-200">Protection avancée pour vos créations sonores</p>
+                        <span class="text-xl font-bold text-gray-800">Sonic<span class="text-primary-600">Proof</span></span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="" class="text-gray-600 hover:text-primary-600 transition-colors">Accueil</a>
+                    <a href="index.html" class="text-gray-600 hover:text-primary-600 transition-colors">Watermarking</a>
+                    <a href="#" class="text-gray-600 hover:text-primary-600 transition-colors">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-600 hover:text-primary-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white pt-24 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="floating-element mb-8">
+                    <div class="w-32 h-32 bg-white/10 rounded-full mx-auto flex items-center justify-center backdrop-blur-sm">
+                        <i class="fas fa-music text-6xl"></i>
+                    </div>
+                </div>
+                <h1 class="text-5xl md:text-6xl font-bold mb-6" data-aos="fade-up">
+                    À propos de <span class="gradient-text">SonicProof</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+                    Une solution innovante de protection audio basée sur des algorithmes avancés de watermarking inaudible
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">Notre Mission</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        SonicProof révolutionne la protection des créations audio en intégrant des métadonnées de droits d'auteur 
+                        directement dans le signal audio, de manière totalement inaudible et résistante aux manipulations.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Notre objectif est de fournir aux créateurs, producteurs et distributeurs de contenu audio 
+                        une solution robuste et fiable pour protéger leurs œuvres contre le piratage et garantir 
+                        une traçabilité complète.
+                    </p>
+                    <div class="flex items-center space-x-6">
+                        <div class="text-center">
+                            <div class="stats-counter" data-target="99">0</div>
+                            <p class="text-sm text-gray-500">% Inaudible</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="stats-counter" data-target="256">0</div>
+                            <p class="text-sm text-gray-500">Bits de données</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="stats-counter" data-target="95">0</div>
+                            <p class="text-sm text-gray-500">% Résistance</p>
                         </div>
                     </div>
+                </div>
+                <div data-aos="fade-left">
+                    <div class="relative">
+                        <div class="wave-animation bg-gradient-to-br from-primary-50 to-primary-100 rounded-2xl p-8">
+                            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="Audio Waveform" 
+                                 class="w-full h-64 object-cover rounded-lg shadow-lg">
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg pulse-animation">
+                            <i class="fas fa-shield-check text-3xl text-primary-600"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4" data-aos="fade-up">Technologies Utilisées</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    Notre solution s'appuie sur des technologies de pointe en traitement du signal et cryptographie
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- HTML5/CSS3 -->
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="tech-icon text-6xl text-orange-500 mb-4">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">HTML5 & CSS3</h3>
+                    <p class="text-gray-600">Interface utilisateur moderne et responsive avec les dernières technologies web</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm">Semantic HTML</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Flexbox</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">Grid Layout</span>
+                    </div>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="tech-icon text-6xl text-yellow-500 mb-4">
+                        <i class="fab fa-js-square"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">JavaScript ES6+</h3>
+                    <p class="text-gray-600">Logique métier et interactions utilisateur avec JavaScript moderne</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm">Async/Await</span>
+                        <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">Modules</span>
+                        <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Web APIs</span>
+                    </div>
+                </div>
+
+                <!-- Python -->
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="tech-icon text-6xl text-blue-600 mb-4">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Python</h3>
+                    <p class="text-gray-600">Algorithmes de traitement audio et watermarking avec Python</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">NumPy</span>
+                        <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">SciPy</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">Librosa</span>
+                    </div>
+                </div>
+
+                <!-- DSP -->
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="tech-icon text-6xl text-purple-600 mb-4">
+                        <i class="fas fa-wave-square"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Traitement du Signal</h3>
+                    <p class="text-gray-600">Algorithmes avancés de DSP pour le watermarking audio</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">DCT</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">DWT</span>
+                        <span class="px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-sm">FFT</span>
+                    </div>
+                </div>
+
+                <!-- Cryptography -->
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="tech-icon text-6xl text-red-600 mb-4">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Cryptographie</h3>
+                    <p class="text-gray-600">Sécurisation des données et génération d'empreintes uniques</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">SHA-256</span>
+                        <span class="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm">HMAC</span>
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm">UUID</span>
+                    </div>
+                </div>
+
+                <!-- Machine Learning -->
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="tech-icon text-6xl text-green-600 mb-4">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Machine Learning</h3>
+                    <p class="text-gray-600">Optimisation des paramètres et détection de manipulations</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">TensorFlow</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Scikit-learn</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">PyTorch</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4" data-aos="fade-up">Fonctionnalités Clés</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    Une suite complète d'outils pour protéger et tracer vos créations audio
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="feature-card text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-eye-slash"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3">Inaudible</h3>
+                    <p class="text-gray-600">Le watermark est complètement transparent à l'écoute humaine</p>
+                </div>
+
+                <div class="feature-card text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3">Robuste</h3>
+                    <p class="text-gray-600">Résiste aux compressions, conversions et manipulations audio</p>
+                </div>
+
+                <div class="feature-card text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-fingerprint"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3">Unique</h3>
+                    <p class="text-gray-600">Chaque fichier reçoit un identifiant unique et traçable</p>
+                </div>
+
+                <div class="feature-card text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3">Rapide</h3>
+                    <p class="text-gray-600">Traitement en temps réel pour tous types de fichiers audio</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Details -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">Architecture Technique</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600 flex-shrink-0">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-2">Transformées Mathématiques</h3>
+                                <p class="text-gray-600">Utilisation de la DCT et DWT pour l'insertion dans le domaine fréquentiel</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600 flex-shrink-0">
+                                <i class="fas fa-random"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-2">Séquence Pseudo-aléatoire</h3>
+                                <p class="text-gray-600">Génération de séquences PN pour la modulation du watermark</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600 flex-shrink-0">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-2">Modulation Adaptative</h3>
+                                <p class="text-gray-600">Ajustement dynamique de la force selon le contenu audio</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600 flex-shrink-0">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-2">Base de Données Sécurisée</h3>
+                                <p class="text-gray-600">Stockage chiffré des métadonnées et registre de traçabilité</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left">
+                    <div class="bg-white rounded-2xl p-8 shadow-lg">
+                        <h3 class="text-xl font-semibold mb-6 text-center">Processus de Watermarking</h3>
+                        <div class="space-y-4">
+                            <div class="timeline-item relative pl-6 pb-4 border-l-2 border-primary-200">
+                                <h4 class="font-medium text-primary-800">1. Analyse Audio</h4>
+                                <p class="text-sm text-gray-600">Segmentation et analyse spectrale</p>
+                            </div>
+                            <div class="timeline-item relative pl-6 pb-4 border-l-2 border-primary-200">
+                                <h4 class="font-medium text-primary-800">2. Génération ID</h4>
+                                <p class="text-sm text-gray-600">Création d'identifiant unique</p>
+                            </div>
+                            <div class="timeline-item relative pl-6 pb-4 border-l-2 border-primary-200">
+                                <h4 class="font-medium text-primary-800">3. Transformation</h4>
+                                <p class="text-sm text-gray-600">Application DCT/DWT</p>
+                            </div>
+                            <div class="timeline-item relative pl-6 pb-4 border-l-2 border-primary-200">
+                                <h4 class="font-medium text-primary-800">4. Insertion</h4>
+                                <p class="text-sm text-gray-600">Modulation des coefficients</p>
+                            </div>
+                            <div class="timeline-item relative pl-6">
+                                <h4 class="font-medium text-primary-800">5. Reconstruction</h4>
+                                <p class="text-sm text-gray-600">Synthèse audio finale</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Context -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4" data-aos="fade-up">Cadre du Projet</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    Un projet innovant né de la nécessité de protéger les créations audio dans l'ère numérique
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl mb-6">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Contexte</h3>
+                    <p class="text-gray-700 mb-4">
+                        Le piratage audio représente une perte de <strong>12,5 milliards €</strong> par an pour l'industrie musicale. 
+                        Les solutions existantes sont souvent audibles ou facilement contournables.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Piratage massif</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Manque de traçabilité</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Solutions limitées</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center text-white text-2xl mb-6">
+                        <i class="fas fa-crosshairs mr-2"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Objectifs</h3>
+                    <p class="text-gray-700 mb-4">
+                        Développer une solution de watermarking audio <strong>inaudible, robuste et traçable</strong>
+                        pour l'industrie musicale moderne.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Protection inaudible</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Résistance maximale</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Traçabilité complète</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gradient-to-br from-purple-50 to-violet-100 rounded-2xl p-8" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center text-white text-2xl mb-6">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Innovation</h3>
+                    <p class="text-gray-700 mb-4">
+                        Combinaison unique d'algorithmes <strong>DCT/DWT</strong> et de séquences pseudo-aléatoirement 
+                        générées pour un watermarking révolutionnaire.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Algorithmes avancés</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Interface intuitive</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Performance optimale</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4" data-aos="fade-up">Équipe de Développement</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    Une équipe passionnée d'experts en traitement du signal et développement web
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="team-card bg-white rounded-2xl p-8 shadow-lg text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-24 h-24 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full mx-auto mb-6 flex items-center justify-center text-white text-2xl">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Chef de Projet</h3>
+                    <p class="text-primary-600 mb-4">Architecture & Leadership</p>
+                    <p class="text-gray-600 text-sm">Expert en gestion de projet et architecture logicielle avec 10+ ans d'expérience</p>
+                </div>
+
+                <div class="team-card bg-white rounded-2xl p-8 shadow-lg text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-24 h-24 bg-gradient-to-br from-green-400 to-green-600 rounded-full mx-auto mb-6 flex items-center justify-center text-white text-2xl">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Développeur Full-Stack</h3>
+                    <p class="text-green-600 mb-4">Frontend & Backend</p>
+                    <p class="text-gray-600 text-sm">Spécialiste en JavaScript, Python et interfaces utilisateur modernes</p>
+                </div>
+
+                <div class="team-card bg-white rounded-2xl p-8 shadow-lg text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-24 h-24 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full mx-auto mb-6 flex items-center justify-center text-white text-2xl">
+                        <i class="fas fa-wave-square"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Ingénieur DSP</h3>
+                    <p class="text-purple-600 mb-4">Traitement du Signal</p>
+                    <p class="text-gray-600 text-sm">Expert en algorithmes de watermarking et traitement audio avancé</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Metrics -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4" data-aos="fade-up">Performances & Métriques</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    Des résultats mesurés et validés scientifiquement
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-20 h-20 bg-primary-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-volume-off text-2xl text-primary-600"></i>
+                    </div>
+                    <div class="stats-counter text-4xl font-bold text-primary-600 mb-2" data-target="0">0</div>
+                    <h3 class="font-semibold mb-2">dB de Distorsion</h3>
+                    <p class="text-gray-600 text-sm">Watermark totalement inaudible</p>
+                </div>
+
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-20 h-20 bg-green-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-clock text-2xl text-green-600"></i>
+                    </div>
+                    <div class="stats-counter text-4xl font-bold text-green-600 mb-2" data-target="2">0</div>
+                    <h3 class="font-semibold mb-2">Secondes de Traitement</h3>
+                    <p class="text-gray-600 text-sm">Pour 1 minute d'audio</p>
+                </div>
+
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-20 h-20 bg-orange-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-shield-alt text-2xl text-orange-600"></i>
+                    </div>
+                    <div class="stats-counter text-4xl font-bold text-orange-600 mb-2" data-target="98">0</div>
+                    <h3 class="font-semibold mb-2">% de Robustesse</h3>
+                    <p class="text-gray-600 text-sm">Contre les attaques courantes</p>
+                </div>
+
+                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-20 h-20 bg-red-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-database text-2xl text-red-600"></i>
+                    </div>
+                    <div class="stats-counter text-4xl font-bold text-red-600 mb-2" data-target="1024">0</div>
+                    <h3 class="font-semibold mb-2">Bits de Données</h3>
+                    <p class="text-gray-600 text-sm">Capacité maximale par fichier</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 hero-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-6">Prêt à Protéger Vos Créations ?</h2>
+                <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                    Découvrez comment SonicProof peut révolutionner la protection de vos contenus audio
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="index.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors">
+                        <i class="fas fa-fingerprint mr-2"></i>
+                        
+                        Commencer le watermarking
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white mr-3">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <span class="text-xl font-bold">Sonic<span class="text-primary-400">Proof</span></span>
+                    </div>
+                    <p class="text-gray-300 mb-4 max-w-md">
+                        La solution de référence pour la protection audio par watermarking inaudible. 
+                        Protégez vos créations avec une technologie de pointe.
+                    </p>
                     <div class="flex space-x-4">
-                        <a href="documentation.html" class="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg text-sm font-medium flex items-center transition duration-300">
-                            <i class="fas fa-home mr-2"></i>
-                            Accueil
-                        </a>
-                        <a href="#" class="bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded-lg text-sm font-medium flex items-center transition duration-300">
-                            <i class="fa-solid fa-headset mr-2"></i>
-                            Support
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="mt-12 md:mt-16 max-w-3xl mx-auto text-center">
-                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">Protection et traçabilité de vos créations audio</h2>
-                    <p class="text-lg md:text-xl text-indigo-100 mb-8">Une solution robuste pour sécuriser vos droits d'auteur avec un watermarking inaudible et une traçabilité complète.</p>
-                    <div class="audio-wave mb-6">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Background Decoration -->
-            <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-r from-primary-900/40 to-primary-700/40 backdrop-blur-sm"></div>
-        </header>
-
-        <!-- Main Content -->
-        <main class="flex-grow container mx-auto px-4 py-8 md:px-6 md:py-12">
-            <!-- Tab Navigation -->
-            <div class="bg-white shadow-lg rounded-xl overflow-hidden mb-8">
-                <div class="flex border-b border-gray-200">
-                    <button class="tab-button active flex-1 py-4 px-4 text-center font-medium text-primary-800 relative overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition-all duration-200" onclick="switchTab('embed')" id="embed-tab-btn">
-                        <div class="flex items-center justify-center">
-                            <i class="fa-solid fa-shield-halved mr-2"></i>
-                            <span>Protection</span>
-                        </div>
-                    </button>
-                    <button class="tab-button flex-1 py-4 px-4 text-center font-medium text-gray-500 hover:text-primary-700 relative overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition-all duration-200" onclick="switchTab('extract')" id="extract-tab-btn">
-                        <div class="flex items-center justify-center">
-                            <i class="fa-solid fa-magnifying-glass mr-2"></i>
-                            <span>Extraction</span>
-                        </div>
-                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-600 transition-all duration-300"></span>
-                    </button>
-                </div>
-
-                <!-- Tab Content Container -->
-                <div class="p-6">
-                    <!-- Embed Tab Content -->
-                    <div id="embed-tab" class="tab-content active animate-fadeIn">
-                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                            <!-- File Upload Section -->
-                            <div class="lg:col-span-2">
-                                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-                                    <div class="p-5 border-b border-gray-100 flex items-center">
-                                        <div class="h-10 w-10 rounded-lg bg-primary-50 flex items-center justify-center text-primary-600 mr-3">
-                                            <i class="fa-solid fa-music"></i>
-                                        </div>
-                                        <h3 class="font-semibold text-gray-800">Fichier audio à protéger</h3>
-                                    </div>
-                                    <div class="p-5">
-                                        <div class="file-drop-area group relative border-2 border-dashed border-gray-300 rounded-lg p-8 text-center cursor-pointer hover:border-primary-400 transition duration-300 bg-gray-50 hover:bg-primary-50" id="audio-drop-area">
-                                            <input type="file" id="audio-file" accept=".wav,.flac,.aiff,.mp3,.ogg,.aac,.m4a,.opus,.wma">
-                                            <div class="flex flex-col items-center justify-center">
-                                                <div class="mb-3 h-16 w-16 text-gray-300 group-hover:text-primary-400 transition-colors">
-                                                    <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M9 16.5C9 17.33 8.33 18 7.5 18S6 17.33 6 16.5 6.67 15 7.5 15 9 15.67 9 16.5ZM16.5 15C15.67 15 15 15.67 15 16.5S15.67 18 16.5 18 18 17.33 18 16.5 17.33 15 16.5 15ZM18 6H16.36V4.99C16.36 3.77 15.36 2.77 14.14 2.77H9.86C8.64 2.77 7.64 3.77 7.64 4.99V6H6C4.9 6 4 6.9 4 8V18C4 19.1 4.9 20 6 20H18C19.1 20 20 19.1 20 18V8C20 6.9 19.1 6 18 6ZM8.96 4.99C8.96 4.5 9.37 4.09 9.86 4.09H14.14C14.63 4.09 15.04 4.5 15.04 4.99V6H8.96V4.99ZM18 18H6V8H18V18Z"/>
-                                                    </svg>
-                                                </div>
-                                                <p class="text-gray-600 group-hover:text-primary-600 mb-1 font-medium">Glissez-déposez votre fichier audio</p>
-                                                <p class="text-gray-400 text-sm mb-3">ou cliquez pour parcourir</p>
-                                                <span class="inline-block bg-gray-100 group-hover:bg-primary-100 text-gray-500 group-hover:text-primary-700 text-xs px-3 py-1 rounded-full transition">
-                                                    WAV, MP3, FLAC, AAC, OGG, M4A...
-                                                </span>
-                                            </div>
-                                            <div class="file-info mt-4" id="audio-file-info"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <!-- Metadata Section -->
-                                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden mt-6">
-                                    <div class="p-5 border-b border-gray-100 flex items-center">
-                                        <div class="h-10 w-10 rounded-lg bg-primary-50 flex items-center justify-center text-primary-600 mr-3">
-                                            <i class="fa-solid fa-copyright"></i>
-                                        </div>
-                                        <h3 class="font-semibold text-gray-800">Métadonnées de droits d'auteur</h3>
-                                    </div>
-                                    <div class="p-5">
-                                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                                            <div class="form-group">
-                                                <label for="author-name" class="block text-sm font-medium text-gray-700 mb-1">Auteur / Créateur</label>
-                                                <input type="text" id="author-name" class="w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500" placeholder="Nom de l'auteur ou du créateur">
-                                            </div>
-                                            
-                                            <div class="form-group">
-                                                <label for="creation-date" class="block text-sm font-medium text-gray-700 mb-1">Date de création</label>
-                                                <input type="date" id="creation-date" class="w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500">
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="form-group mt-5">
-                                            <label for="license-info" class="block text-sm font-medium text-gray-700 mb-1">Informations de licence</label>
-                                            <select id="license-info" class="w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500">
-                                                <option value="all-rights-reserved">Tous droits réservés</option>
-                                                <option value="cc-by">Creative Commons - Attribution</option>
-                                                <option value="cc-by-sa">Creative Commons - Attribution - Partage dans les mêmes conditions</option>
-                                                <option value="cc-by-nc">Creative Commons - Attribution - Pas d'utilisation commerciale</option>
-                                                <option value="cc-by-nc-sa">Creative Commons - Attribution - Pas d'utilisation commerciale - Partage dans les mêmes conditions</option>
-                                                <option value="cc-by-nd">Creative Commons - Attribution - Pas de modification</option>
-                                                <option value="cc-by-nc-nd">Creative Commons - Attribution - Pas d'utilisation commerciale - Pas de modification</option>
-                                                <option value="cc0">Creative Commons - CC0 / Domaine Public</option>
-                                                <option value="custom">Licence personnalisée</option>
-                                            </select>
-                                        </div>
-                                        
-                                        <div id="custom-license-container" class="form-group mt-5 hidden">
-                                            <label for="custom-license" class="block text-sm font-medium text-gray-700 mb-1">Détails de la licence personnalisée</label>
-                                            <textarea id="custom-license" class="w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500" rows="3" placeholder="Décrivez les termes de votre licence personnalisée..."></textarea>
-                                        </div>
-                                        
-                                        <div class="form-group mt-5">
-                                            <label for="additional-info" class="block text-sm font-medium text-gray-700 mb-1">Informations additionnelles</label>
-                                            <textarea id="additional-info" class="w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500" rows="2" placeholder="Informations supplémentaires (optionnel)"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Settings Panel -->
-                            <div class="lg:col-span-1">
-                                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden sticky top-4">
-                                    <div class="p-5 border-b border-gray-100 flex items-center">
-                                        <div class="h-10 w-10 rounded-lg bg-primary-50 flex items-center justify-center text-primary-600 mr-3">
-                                            <i class="fa-solid fa-sliders"></i>
-                                        </div>
-                                        <h3 class="font-semibold text-gray-800">Paramètres</h3>
-                                    </div>
-                                    <div class="p-5">
-                                        <div class="form-group">
-                                            <label for="embed-method" class="block text-sm font-medium text-gray-700 mb-1">Méthode d'encodage</label>
-                                            <select id="embed-method" class="w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500">
-                                                <option value="DCT">Transformée en cosinus discrète (DCT)</option>
-                                                <option value="DWT+DCT" selected>Transformée en ondelettes + DCT</option>
-                                            </select>
-                                        </div>
-                                        
-                                        <button type="button" class="flex items-center justify-between w-full text-left mt-6 text-sm font-medium text-primary-700 hover:text-primary-800 focus:outline-none" id="embed-advanced-toggle">
-                                            <span>Paramètres avancés</span>
-                                            <i class="fa-solid fa-chevron-down transition-transform duration-300"></i>
-                                        </button>
-                                        
-                                        <div id="embed-advanced" class="mt-4 space-y-4 hidden">
-                                            <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
-                                                <div class="grid grid-cols-2 gap-4">
-                                                    <div class="form-group">
-                                                        <label for="embed-segment-length" class="block text-xs font-medium text-gray-700 mb-1">Longueur segment</label>
-                                                        <select id="embed-segment-length" class="w-full px-2 py-1.5 text-sm border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500">
-                                                            <option value="512">512</option>
-                                                            <option value="1024">1024</option>
-                                                            <option value="2048" selected>2048</option>
-                                                            <option value="4096">4096</option>
-                                                            <option value="8192">8192</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="embed-seed" class="block text-xs font-medium text-gray-700 mb-1">Graine aléatoire</label>
-                                                        <input type="number" id="embed-seed" class="w-full px-2 py-1.5 text-sm border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500" value="42">
-                                                    </div>
-                                                </div>
-                                                
-                                                <div class="mt-3">
-                                                    <label for="embed-modulation" class="block text-xs font-medium text-gray-700 mb-1">Force de modulation</label>
-                                                    <div class="flex items-center">
-                                                        <span class="text-xs text-gray-500 mr-2">Faible</span>
-                                                        <input type="range" id="embed-modulation" class="flex-grow h-1.5 bg-gray-200 rounded-lg appearance-none cursor-pointer" min="0.001" max="0.05" step="0.001" value="0.005">
-                                                        <span class="text-xs text-gray-500 ml-2">Forte</span>
-                                                    </div>
-                                                    <div class="text-center mt-1">
-                                                        <span id="modulation-value" class="text-xs font-medium">0.005</span>
-                                                    </div>
-                                                </div>
-                                                
-                                                <div class="grid grid-cols-2 gap-4 mt-3">
-                                                    <div class="form-group">
-                                                        <label for="embed-band-lower" class="block text-xs font-medium text-gray-700 mb-1">Bande inférieure (%)</label>
-                                                        <input type="number" id="embed-band-lower" class="w-full px-2 py-1.5 text-sm border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500" value="33" min="0" max="100">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="embed-band-upper" class="block text-xs font-medium text-gray-700 mb-1">Bande supérieure (%)</label>
-                                                        <input type="number" id="embed-band-upper" class="w-full px-2 py-1.5 text-sm border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500" value="66" min="0" max="100">
-                                                    </div>
-                                                </div>
-                                                
-                                                <div class="grid grid-cols-2 gap-4 mt-3">
-                                                    <div class="form-group">
-                                                        <label for="embed-n-coeffs" class="block text-xs font-medium text-gray-700 mb-1">Nb coefficients</label>
-                                                        <input type="number" id="embed-n-coeffs" class="w-full px-2 py-1.5 text-sm border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500" value="5" min="1" max="10">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="embed-dwt-level" class="block text-xs font-medium text-gray-700 mb-1">Niveau DWT</label>
-                                                        <input type="number" id="embed-dwt-level" class="w-full px-2 py-1.5 text-sm border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500" value="1" min="1" max="5">
-                                                    </div>
-                                                </div>
-                                                
-                                                <div class="grid grid-cols-2 gap-4 mt-3">
-                                                    <div class="form-group">
-                                                        <label for="embed-dwt-wavelet" class="block text-xs font-medium text-gray-700 mb-1">Type d'ondelette</label>
-                                                        <select id="embed-dwt-wavelet" class="w-full px-2 py-1.5 text-sm border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500">
-                                                            <option value="haar" selected>haar</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="embed-dwt-coeff" class="block text-xs font-medium text-gray-700 mb-1">Coefficients DWT</label>
-                                                        <select id="embed-dwt-coeff" class="w-full px-2 py-1.5 text-sm border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500">
-                                                            <option value="cA" selected>cA</option>
-                                                            <option value="cD">cD</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="text-xs text-gray-500 mt-2">
-                                                <p>Ces paramètres avancés influencent la robustesse et l'imperceptibilité du watermark.</p>
-                                            </div>
-                                        </div>
-                                        
-                                        <button class="w-full mt-6 bg-primary-600 hover:bg-primary-700 text-white py-3 px-4 rounded-lg font-medium transition-colors duration-300 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2" onclick="processEmbedding()" id="embed-btn">
-                                            <i class="fa-solid fa-shield-halved mr-2"></i>
-                                            Protéger le contenu
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Progress & Results -->
-                        <div class="mt-8">
-                            <div class="progress-container hidden" id="embed-progress">
-                                <div class="flex items-center justify-between mb-2">
-                                    <p class="text-sm text-gray-600" id="embed-progress-text">Traitement en cours...</p>
-                                    <span class="text-xs font-medium text-primary-600" id="embed-progress-percent">0%</span>
-                                </div>
-                                <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
-                                    <div class="progress-fill h-full w-0 rounded-full" id="embed-progress-fill"></div>
-                                </div>
-                            </div>
-                            
-                            <div class="result-container hidden animate-fadeIn" id="embed-result">
-                                <div class="bg-green-50 border border-green-100 rounded-xl p-6 mb-6">
-                                    <div class="flex items-center mb-4">
-                                        <div class="h-10 w-10 rounded-full bg-green-100 flex items-center justify-center text-green-600 mr-3">
-                                            <i class="fa-solid fa-check text-lg"></i>
-                                        </div>
-                                        <h3 class="font-semibold text-gray-800 text-lg">Protection appliquée avec succès</h3>
-                                    </div>
-                                    
-                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                        <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
-                                            <h4 class="text-sm font-medium text-gray-500 mb-2">Identifiant unique généré</h4>
-                                            <div class="flex items-center">
-                                                <div class="bg-primary-50 border border-primary-100 rounded-lg px-3 py-2 font-mono text-primary-700 font-medium text-lg flex-grow text-center" id="generated-id"></div>
-                                                <button class="ml-2 text-gray-400 hover:text-gray-600 p-2" onclick="copyToClipboard('generated-id')" title="Copier l'ID">
-                                                    <i class="fa-regular fa-copy"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
-                                            <h4 class="text-sm font-medium text-gray-500 mb-2">Empreinte de vérification</h4>
-                                            <div class="font-mono text-xs text-gray-600 bg-gray-50 p-3 rounded-lg border border-gray-200 overflow-x-auto whitespace-nowrap" id="generated-hash"></div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="flex items-center justify-center mt-6">
-                                        <button class="bg-primary-600 hover:bg-primary-700 text-white py-3 px-6 rounded-lg font-medium transition-colors duration-300 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2" onclick="downloadWatermarkedAudio()">
-                                            <i class="fa-solid fa-download mr-2"></i>
-                                            Télécharger l'audio protégé
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div id="embed-status" class="mt-4"></div>
-                        </div>
-                    </div>
-                    
-                    <!-- Extract Tab Content -->
-                    <div id="extract-tab" class="tab-content hidden animate-fadeIn">
-                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                            <!-- File Upload Section -->
-                            <div class="lg:col-span-2">
-                                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-                                    <div class="p-5 border-b border-gray-100 flex items-center">
-                                        <div class="h-10 w-10 rounded-lg bg-primary-50 flex items-center justify-center text-primary-600 mr-3">
-                                            <i class="fa-solid fa-magnifying-glass-chart"></i>
-                                        </div>
-                                        <h3 class="font-semibold text-gray-800">Extraction et vérification</h3>
-                                    </div>
-                                    <div class="p-5">
-                                        <div class="file-drop-area group relative border-2 border-dashed border-gray-300 rounded-lg p-8 text-center cursor-pointer hover:border-primary-400 transition duration-300 bg-gray-50 hover:bg-primary-50" id="extract-audio-drop-area">
-                                            <input type="file" id="extract-audio-file" accept=".wav,.flac,.aiff,.mp3,.ogg,.aac,.m4a,.opus,.wma">
-                                            <div class="flex flex-col items-center justify-center">
-                                                <div class="mb-3 h-16 w-16 text-gray-300 group-hover:text-primary-400 transition-colors">
-                                                    <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M12 3C10.34 3 9 4.34 9 6V16C9 17.66 10.34 19 12 19C13.66 19 15 17.66 15 16V8H19V6H15V6C15 5.45 14.55 5 14 5C13.45 5 13 5.45 13 6V16C13 16.55 12.55 17 12 17C11.45 17 11 16.55 11 16V6C11 5.45 11.45 5 12 5C12.55 5 13 5.45 13 6H15C15 4.34 13.66 3 12 3ZM19 10V12H21V10H19ZM7 10V12H5V10H7ZM3 10V12H1V10H3ZM19 14V16H21V14H19ZM7 14V16H5V14H7ZM3 14V16H1V14H3Z"/>
-                                                    </svg>
-                                                </div>
-                                                <p class="text-gray-600 group-hover:text-primary-600 mb-1 font-medium">Glissez-déposez votre fichier watermarqué</p>
-                                                <p class="text-gray-400 text-sm mb-3">ou cliquez pour parcourir</p>
-                                                <span class="inline-block bg-gray-100 group-hover:bg-primary-100 text-gray-500 group-hover:text-primary-700 text-xs px-3 py-1 rounded-full transition">
-                                                    WAV, MP3, FLAC, AAC, OGG, M4A...
-                                                </span>
-                                            </div>
-                                            <div class="file-info mt-4" id="extract-file-info"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Extract Settings -->
-                            <div class="lg:col-span-1">
-                                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden sticky top-4">
-                                    <div class="p-5 border-b border-gray-100 flex items-center">
-                                        <div class="h-10 w-10 rounded-lg bg-primary-50 flex items-center justify-center text-primary-600 mr-3">
-                                            <i class="fa-solid fa-sliders"></i>
-                                        </div>
-                                        <h3 class="font-semibold text-gray-800">Paramètres</h3>
-                                    </div>
-                                    <div class="p-5">
-                                        <div class="form-group">
-                                            <label for="extract-method" class="block text-sm font-medium text-gray-700 mb-1">Méthode de décodage</label>
-                                            <select id="extract-method" class="w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500">
-                                                <option value="DCT">Transformée en cosinus discrète (DCT)</option>
-                                                <option value="DWT+DCT" selected>Transformée en ondelettes + DCT</option>
-                                            </select>
-                                        </div>
-                                        
-                                        <button type="button" class="flex items-center justify-between w-full text-left mt-6 text-sm font-medium text-primary-700 hover:text-primary-800 focus:outline-none" id="extract-advanced-toggle">
-                                            <span>Paramètres avancés</span>
-                                            <i class="fa-solid fa-chevron-down transition-transform duration-300"></i>
-                                        </button>
-                                        
-                                        <div id="extract-advanced" class="mt-4 space-y-4 hidden">
-                                            <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
-                                                <div class="grid grid-cols-2 gap-4">
-                                                    <div class="form-group">
-                                                        <label for="extract-segment-length" class="block text-xs font-medium text-gray-700 mb-1">Longueur segment</label>
-                                                        <select id="extract-segment-length" class="w-full px-2 py-1.5 text-sm border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500">
-                                                            <option value="512">512</option>
-                                                            <option value="1024">1024</option>
-                                                            <option value="2048" selected>2048</option>
-                                                            <option value="4096">4096</option>
-                                                            <option value="8192">8192</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="extract-seed" class="block text-xs font-medium text-gray-700 mb-1">Graine aléatoire</label>
-                                                        <input type="number" id="extract-seed" class="w-full px-2 py-1.5 text-sm border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500" value="42">
-                                                    </div>
-                                                </div>
-                                                
-                                                <div class="mt-3">
-                                                    <label for="extract-modulation" class="block text-xs font-medium text-gray-700 mb-1">Force de modulation</label>
-                                                    <div class="flex items-center">
-                                                        <span class="text-xs text-gray-500 mr-2">Faible</span>
-                                                        <input type="range" id="extract-modulation" class="flex-grow h-1.5 bg-gray-200 rounded-lg appearance-none cursor-pointer" min="0.001" max="0.05" step="0.001" value="0.005">
-                                                        <span class="text-xs text-gray-500 ml-2">Forte</span>
-                                                    </div>
-                                                    <div class="text-center mt-1">
-                                                        <span id="extract-modulation-value" class="text-xs font-medium">0.005</span>
-                                                    </div>
-                                                </div>
-                                                
-                                                <div class="grid grid-cols-2 gap-4 mt-3">
-                                                    <div class="form-group">
-                                                        <label for="extract-band-lower" class="block text-xs font-medium text-gray-700 mb-1">Bande inférieure (%)</label>
-                                                        <input type="number" id="extract-band-lower" class="w-full px-2 py-1.5 text-sm border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500" value="33" min="0" max="100">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="extract-band-upper" class="block text-xs font-medium text-gray-700 mb-1">Bande supérieure (%)</label>
-                                                        <input type="number" id="extract-band-upper" class="w-full px-2 py-1.5 text-sm border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500" value="66" min="0" max="100">
-                                                    </div>
-                                                </div>
-                                                
-                                                <div class="grid grid-cols-2 gap-4 mt-3">
-                                                    <div class="form-group">
-                                                        <label for="extract-n-coeffs" class="block text-xs font-medium text-gray-700 mb-1">Nb coefficients</label>
-                                                        <input type="number" id="extract-n-coeffs" class="w-full px-2 py-1.5 text-sm border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500" value="5" min="1" max="10">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="extract-dwt-level" class="block text-xs font-medium text-gray-700 mb-1">Niveau DWT</label>
-                                                        <input type="number" id="extract-dwt-level" class="w-full px-2 py-1.5 text-sm border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500" value="1" min="1" max="5">
-                                                    </div>
-                                                </div>
-                                                
-                                                <div class="grid grid-cols-2 gap-4 mt-3">
-                                                    <div class="form-group">
-                                                        <label for="extract-dwt-wavelet" class="block text-xs font-medium text-gray-700 mb-1">Type d'ondelette</label>
-                                                        <select id="extract-dwt-wavelet" class="w-full px-2 py-1.5 text-sm border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500">
-                                                            <option value="haar" selected>haar</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="extract-dwt-coeff" class="block text-xs font-medium text-gray-700 mb-1">Coefficients DWT</label>
-                                                        <select id="extract-dwt-coeff" class="w-full px-2 py-1.5 text-sm border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500">
-                                                            <option value="cA" selected>cA</option>
-                                                            <option value="cD">cD</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="text-xs text-gray-500 mt-2">
-                                                <p>Ces paramètres doivent correspondre à ceux utilisés lors de la protection.</p>
-                                            </div>
-                                        </div>
-                                        
-                                        <button class="w-full mt-6 bg-primary-600 hover:bg-primary-700 text-white py-3 px-4 rounded-lg font-medium transition-colors duration-300 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2" onclick="processExtraction()" id="extract-btn">
-                                            <i class="fa-solid fa-magnifying-glass mr-2"></i>
-                                            Extraire et vérifier
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Extract Progress & Results -->
-                        <div class="mt-8">
-                            <div class="progress-container hidden" id="extract-progress">
-                                <div class="flex items-center justify-between mb-2">
-                                    <p class="text-sm text-gray-600" id="extract-progress-text">Extraction en cours...</p>
-                                    <span class="text-xs font-medium text-primary-600" id="extract-progress-percent">0%</span>
-                                </div>
-                                <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
-                                    <div class="progress-fill h-full w-0 rounded-full" id="extract-progress-fill"></div>
-                                </div>
-                            </div>
-                            
-                            <div class="result-container hidden animate-fadeIn" id="extract-result">
-                                <div class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
-                                    <div class="p-5 bg-gray-50 border-b border-gray-200">
-                                        <h3 class="font-semibold text-gray-800">Résultats de l'extraction</h3>
-                                    </div>
-                                    
-                                    <div class="p-5">
-                                        <div class="bg-primary-50 border border-primary-100 rounded-lg p-4 mb-6">
-                                            <h4 class="text-sm font-medium text-gray-700 mb-2">Identifiant extrait</h4>
-                                            <div class="flex items-center">
-                                                <div class="bg-white border border-primary-200 rounded-lg px-3 py-2 font-mono text-primary-700 font-medium text-lg flex-grow text-center" id="extracted-id"></div>
-                                                <button class="ml-2 text-gray-400 hover:text-gray-600 p-2" onclick="copyToClipboard('extracted-id')" title="Copier l'ID">
-                                                    <i class="fa-regular fa-copy"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="border border-gray-200 rounded-lg overflow-hidden mb-6">
-                                            <div class="bg-gray-50 px-4 py-3 border-b border-gray-200">
-                                                <h4 class="font-medium text-gray-700">Métadonnées associées</h4>
-                                            </div>
-                                            <div class="p-4" id="extracted-metadata">
-                                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                                    <div class="bg-white border border-gray-100 rounded-lg p-3">
-                                                        <p class="text-xs text-gray-500 mb-1">Auteur</p>
-                                                        <p class="font-medium" id="extracted-author">-</p>
-                                                    </div>
-                                                    <div class="bg-white border border-gray-100 rounded-lg p-3">
-                                                        <p class="text-xs text-gray-500 mb-1">Date de création</p>
-                                                        <p class="font-medium" id="extracted-date">-</p>
-                                                    </div>
-                                                    <div class="bg-white border border-gray-100 rounded-lg p-3 md:col-span-2">
-                                                        <p class="text-xs text-gray-500 mb-1">Licence</p>
-                                                        <p class="font-medium" id="extracted-license">-</p>
-                                                    </div>
-                                                    <div class="bg-white border border-gray-100 rounded-lg p-3 md:col-span-2">
-                                                        <p class="text-xs text-gray-500 mb-1">Informations additionnelles</p>
-                                                        <p class="font-medium" id="extracted-additional">-</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="border border-gray-200 rounded-lg overflow-hidden">
-                                            <div class="bg-gray-50 px-4 py-3 border-b border-gray-200">
-                                                <h4 class="font-medium text-gray-700">Vérification d'intégrité</h4>
-                                            </div>
-                                            <div class="p-4 bg-gray-50" id="integrity-check-container">
-                                                <div class="flex items-center p-3 bg-white rounded-lg border border-gray-100" id="integrity-check-result">
-                                                    <i class="fa-solid fa-spinner fa-spin mr-3 text-gray-500"></i>
-                                                    <span>Vérification en cours...</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div id="extract-status" class="mt-4"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-        
-        <!-- Footer -->
-        <footer class="bg-gray-900 text-gray-400 py-12">
-            <div class="container mx-auto px-4 md:px-6">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <div class="mb-6 md:mb-0">
-                        <div class="flex items-center">
-                            <div class="mr-3 bg-gray-800 p-2 rounded-lg">
-                                <svg class="w-8 h-8 text-primary-400" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM7 13.5C6.17 13.5 5.5 12.83 5.5 12C5.5 11.17 6.17 10.5 7 10.5C7.83 10.5 8.5 11.17 8.5 12C8.5 12.83 7.83 13.5 7 13.5ZM12 13.5C11.17 13.5 10.5 12.83 10.5 12C10.5 11.17 11.17 10.5 12 10.5C12.83 10.5 13.5 11.17 13.5 12C13.5 12.83 12.83 13.5 12 13.5ZM17 13.5C16.17 13.5 15.5 12.83 15.5 12C15.5 11.17 16.17 10.5 17 10.5C17.83 10.5 18.5 11.17 18.5 12C18.5 12.83 17.83 13.5 17 13.5Z" fill="currentColor"/>
-                                <path d="M12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22ZM12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4Z" fill="currentColor" fill-opacity="0.3"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h2 class="text-xl font-bold text-white">Sonic<span class="text-primary-400">Proof</span></h2>
-                            <p class="text-xs">Protection audio professionnelle</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex space-x-6">
-                        <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors">
-                            <i class="fab fa-twitter text-xl"></i>
-                        </a>
                         <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors">
                             <i class="fab fa-github text-xl"></i>
                         </a>
                         <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors">
                             <i class="fab fa-linkedin text-xl"></i>
                         </a>
+                        <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
                     </div>
                 </div>
-                
-                <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between">
-                    <p class="text-sm mb-4 md:mb-0">&copy; 2025 SonicProof. Tous droits réservés.</p>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Confidentialité</a>
-                        <a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Conditions d'utilisation</a>
-                        <a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Contact</a>
-                    </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-primary-400 transition-colors">Accueil</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary-400 transition-colors">À propos</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary-400 transition-colors">Documentation</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Technologies</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-primary-400 transition-colors">HTML5/CSS3</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary-400 transition-colors">JavaScript</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary-400 transition-colors">Python</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary-400 transition-colors">DSP</a></li>
+                    </ul>
                 </div>
             </div>
-        </footer>
-    </div>
-<script src="script.js"></script>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">
+                    © 2024 SonicProof. Tous droits réservés.
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-primary-400 text-sm transition-colors">Conditions d'utilisation</a>
+                    <a href="#" class="text-gray-400 hover:text-primary-400 text-sm transition-colors">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            offset: 100,
+            once: true
+        });
+
+        // Stats Counter Animation
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            
+            function updateCounter() {
+                start += increment;
+                if (start < target) {
+                    element.textContent = Math.floor(start);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = target;
+                }
+            }
+            
+            updateCounter();
+        }
+
+        // Intersection Observer for counters
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                    const target = parseInt(entry.target.getAttribute('data-target'));
+                    animateCounter(entry.target, target);
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all counters
+        document.querySelectorAll('.stats-counter').forEach(counter => {
+            observer.observe(counter);
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.md\\:hidden button');
+        const mobileMenu = document.createElement('div');
+        mobileMenu.className = 'md:hidden bg-white shadow-lg absolute top-16 left-0 right-0 z-40';
+        mobileMenu.innerHTML = `
+            <div class="px-4 py-2 space-y-2">
+                <a href="index.html" class="block py-2 text-gray-600 hover:text-primary-600">Accueil</a>
+                <a href="#" class="block py-2 text-primary-600 font-medium">À propos</a>
+                <a href="#" class="block py-2 text-gray-600 hover:text-primary-600">Documentation</a>
+                <a href="#" class="block py-2 text-gray-600 hover:text-primary-600">Contact</a>
+            </div>
+        `;
+
+        let mobileMenuOpen = false;
+        mobileMenuBtn.addEventListener('click', () => {
+            if (!mobileMenuOpen) {
+                document.querySelector('nav').appendChild(mobileMenu);
+                mobileMenuOpen = true;
+            } else {
+                mobileMenu.remove();
+                mobileMenuOpen = false;
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add loading animation
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+    </script>
 </body>
-</html>
 </html>
