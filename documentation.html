@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - SonicProof</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            200: '#c7d2fe',
+                            300: '#a5b4fc',
+                            400: '#818cf8',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            800: '#3730a3',
+                            900: '#312e81',
+                            950: '#1e1b4b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(180deg); }
+        }
+
+        .tech-card {
+            transition: all 0.3s ease;
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .tech-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .floating-element {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .wave-animation {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .wave-animation::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: wave 2s infinite;
+        }
+
+        @keyframes wave {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .pulse-animation {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .tech-icon {
+            transition: all 0.3s ease;
+        }
+
+        .tech-card:hover .tech-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #4f46e5;
+            border: 4px solid white;
+            box-shadow: 0 0 0 4px #4f46e5;
+        }
+
+        .stats-counter {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #4f46e5;
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            margin: 0 auto 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1);
+            box-shadow: 0 20px 40px rgba(79, 70, 229, 0.3);
+        }
+
+        .team-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(79, 70, 229, 0.1), transparent);
+            transition: all 0.5s ease;
+        }
+
+        .team-card:hover::before {
+            left: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white mr-3">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <span class="text-xl font-bold text-gray-800">Sonic<span class="text-primary-600">Proof</span></span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="" class="text-gray-600 hover:text-primary-600 transition-colors">Accueil</a>
+                    <a href="index.html" class="text-gray-600 hover:text-primary-600 transition-colors">Watermarking</a>
+                    <a href="#" class="text-gray-600 hover:text-primary-600 transition-colors">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-600 hover:text-primary-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white pt-24 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="floating-element mb-8">
+                    <div class="w-32 h-32 bg-white/10 rounded-full mx-auto flex items-center justify-center backdrop-blur-sm">
+                        <i class="fas fa-music text-6xl"></i>
+                    </div>
+                </div>
+                <h1 class="text-5xl md:text-6xl font-bold mb-6" data-aos="fade-up">
+                    À propos de <span class="gradient-text">SonicProof</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+                    Une solution innovante de protection audio basée sur des algorithmes avancés de watermarking inaudible
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">Notre Mission</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        SonicProof révolutionne la protection des créations audio en intégrant des métadonnées de droits d'auteur 
+                        directement dans le signal audio, de manière totalement inaudible et résistante aux manipulations.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Notre objectif est de fournir aux créateurs, producteurs et distributeurs de contenu audio 
+                        une solution robuste et fiable pour protéger leurs œuvres contre le piratage et garantir 
+                        une traçabilité complète.
+                    </p>
+                    <div class="flex items-center space-x-6">
+                        <div class="text-center">
+                            <div class="stats-counter" data-target="99">0</div>
+                            <p class="text-sm text-gray-500">% Inaudible</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="stats-counter" data-target="256">0</div>
+                            <p class="text-sm text-gray-500">Bits de données</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="stats-counter" data-target="95">0</div>
+                            <p class="text-sm text-gray-500">% Résistance</p>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <div class="relative">
+                        <div class="wave-animation bg-gradient-to-br from-primary-50 to-primary-100 rounded-2xl p-8">
+                            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="Audio Waveform" 
+                                 class="w-full h-64 object-cover rounded-lg shadow-lg">
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg pulse-animation">
+                            <i class="fas fa-shield-check text-3xl text-primary-600"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4" data-aos="fade-up">Technologies Utilisées</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    Notre solution s'appuie sur des technologies de pointe en traitement du signal et cryptographie
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- HTML5/CSS3 -->
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="tech-icon text-6xl text-orange-500 mb-4">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">HTML5 & CSS3</h3>
+                    <p class="text-gray-600">Interface utilisateur moderne et responsive avec les dernières technologies web</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm">Semantic HTML</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Flexbox</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">Grid Layout</span>
+                    </div>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="tech-icon text-6xl text-yellow-500 mb-4">
+                        <i class="fab fa-js-square"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">JavaScript ES6+</h3>
+                    <p class="text-gray-600">Logique métier et interactions utilisateur avec JavaScript moderne</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm">Async/Await</span>
+                        <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">Modules</span>
+                        <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">Web APIs</span>
+                    </div>
+                </div>
+
+                <!-- Python -->
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="tech-icon text-6xl text-blue-600 mb-4">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Python</h3>
+                    <p class="text-gray-600">Algorithmes de traitement audio et watermarking avec Python</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">NumPy</span>
+                        <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">SciPy</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">Librosa</span>
+                    </div>
+                </div>
+
+                <!-- DSP -->
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="tech-icon text-6xl text-purple-600 mb-4">
+                        <i class="fas fa-wave-square"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Traitement du Signal</h3>
+                    <p class="text-gray-600">Algorithmes avancés de DSP pour le watermarking audio</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">DCT</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">DWT</span>
+                        <span class="px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-sm">FFT</span>
+                    </div>
+                </div>
+
+                <!-- Cryptography -->
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="tech-icon text-6xl text-red-600 mb-4">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Cryptographie</h3>
+                    <p class="text-gray-600">Sécurisation des données et génération d'empreintes uniques</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">SHA-256</span>
+                        <span class="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm">HMAC</span>
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm">UUID</span>
+                    </div>
+                </div>
+
+                <!-- Machine Learning -->
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="tech-icon text-6xl text-green-600 mb-4">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Machine Learning</h3>
+                    <p class="text-gray-600">Optimisation des paramètres et détection de manipulations</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">TensorFlow</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Scikit-learn</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">PyTorch</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4" data-aos="fade-up">Fonctionnalités Clés</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    Une suite complète d'outils pour protéger et tracer vos créations audio
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="feature-card text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-eye-slash"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3">Inaudible</h3>
+                    <p class="text-gray-600">Le watermark est complètement transparent à l'écoute humaine</p>
+                </div>
+
+                <div class="feature-card text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3">Robuste</h3>
+                    <p class="text-gray-600">Résiste aux compressions, conversions et manipulations audio</p>
+                </div>
+
+                <div class="feature-card text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-fingerprint"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3">Unique</h3>
+                    <p class="text-gray-600">Chaque fichier reçoit un identifiant unique et traçable</p>
+                </div>
+
+                <div class="feature-card text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3">Rapide</h3>
+                    <p class="text-gray-600">Traitement en temps réel pour tous types de fichiers audio</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Details -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">Architecture Technique</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600 flex-shrink-0">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-2">Transformées Mathématiques</h3>
+                                <p class="text-gray-600">Utilisation de la DCT et DWT pour l'insertion dans le domaine fréquentiel</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600 flex-shrink-0">
+                                <i class="fas fa-random"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-2">Séquence Pseudo-aléatoire</h3>
+                                <p class="text-gray-600">Génération de séquences PN pour la modulation du watermark</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600 flex-shrink-0">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-2">Modulation Adaptative</h3>
+                                <p class="text-gray-600">Ajustement dynamique de la force selon le contenu audio</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600 flex-shrink-0">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-2">Base de Données Sécurisée</h3>
+                                <p class="text-gray-600">Stockage chiffré des métadonnées et registre de traçabilité</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left">
+                    <div class="bg-white rounded-2xl p-8 shadow-lg">
+                        <h3 class="text-xl font-semibold mb-6 text-center">Processus de Watermarking</h3>
+                        <div class="space-y-4">
+                            <div class="timeline-item relative pl-6 pb-4 border-l-2 border-primary-200">
+                                <h4 class="font-medium text-primary-800">1. Analyse Audio</h4>
+                                <p class="text-sm text-gray-600">Segmentation et analyse spectrale</p>
+                            </div>
+                            <div class="timeline-item relative pl-6 pb-4 border-l-2 border-primary-200">
+                                <h4 class="font-medium text-primary-800">2. Génération ID</h4>
+                                <p class="text-sm text-gray-600">Création d'identifiant unique</p>
+                            </div>
+                            <div class="timeline-item relative pl-6 pb-4 border-l-2 border-primary-200">
+                                <h4 class="font-medium text-primary-800">3. Transformation</h4>
+                                <p class="text-sm text-gray-600">Application DCT/DWT</p>
+                            </div>
+                            <div class="timeline-item relative pl-6 pb-4 border-l-2 border-primary-200">
+                                <h4 class="font-medium text-primary-800">4. Insertion</h4>
+                                <p class="text-sm text-gray-600">Modulation des coefficients</p>
+                            </div>
+                            <div class="timeline-item relative pl-6">
+                                <h4 class="font-medium text-primary-800">5. Reconstruction</h4>
+                                <p class="text-sm text-gray-600">Synthèse audio finale</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Context -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4" data-aos="fade-up">Cadre du Projet</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    Un projet innovant né de la nécessité de protéger les créations audio dans l'ère numérique
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl mb-6">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Contexte</h3>
+                    <p class="text-gray-700 mb-4">
+                        Le piratage audio représente une perte de <strong>12,5 milliards €</strong> par an pour l'industrie musicale. 
+                        Les solutions existantes sont souvent audibles ou facilement contournables.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Piratage massif</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Manque de traçabilité</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Solutions limitées</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center text-white text-2xl mb-6">
+                        <i class="fas fa-crosshairs mr-2"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Objectifs</h3>
+                    <p class="text-gray-700 mb-4">
+                        Développer une solution de watermarking audio <strong>inaudible, robuste et traçable</strong>
+                        pour l'industrie musicale moderne.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Protection inaudible</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Résistance maximale</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Traçabilité complète</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gradient-to-br from-purple-50 to-violet-100 rounded-2xl p-8" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center text-white text-2xl mb-6">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Innovation</h3>
+                    <p class="text-gray-700 mb-4">
+                        Combinaison unique d'algorithmes <strong>DCT/DWT</strong> et de séquences pseudo-aléatoirement 
+                        générées pour un watermarking révolutionnaire.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Algorithmes avancés</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Interface intuitive</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Performance optimale</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4" data-aos="fade-up">Équipe de Développement</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    Une équipe passionnée d'experts en traitement du signal et développement web
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="team-card bg-white rounded-2xl p-8 shadow-lg text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-24 h-24 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full mx-auto mb-6 flex items-center justify-center text-white text-2xl">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Chef de Projet</h3>
+                    <p class="text-primary-600 mb-4">Architecture & Leadership</p>
+                    <p class="text-gray-600 text-sm">Expert en gestion de projet et architecture logicielle avec 10+ ans d'expérience</p>
+                </div>
+
+                <div class="team-card bg-white rounded-2xl p-8 shadow-lg text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-24 h-24 bg-gradient-to-br from-green-400 to-green-600 rounded-full mx-auto mb-6 flex items-center justify-center text-white text-2xl">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Développeur Full-Stack</h3>
+                    <p class="text-green-600 mb-4">Frontend & Backend</p>
+                    <p class="text-gray-600 text-sm">Spécialiste en JavaScript, Python et interfaces utilisateur modernes</p>
+                </div>
+
+                <div class="team-card bg-white rounded-2xl p-8 shadow-lg text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-24 h-24 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full mx-auto mb-6 flex items-center justify-center text-white text-2xl">
+                        <i class="fas fa-wave-square"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Ingénieur DSP</h3>
+                    <p class="text-purple-600 mb-4">Traitement du Signal</p>
+                    <p class="text-gray-600 text-sm">Expert en algorithmes de watermarking et traitement audio avancé</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Metrics -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4" data-aos="fade-up">Performances & Métriques</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    Des résultats mesurés et validés scientifiquement
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-20 h-20 bg-primary-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-volume-off text-2xl text-primary-600"></i>
+                    </div>
+                    <div class="stats-counter text-4xl font-bold text-primary-600 mb-2" data-target="0">0</div>
+                    <h3 class="font-semibold mb-2">dB de Distorsion</h3>
+                    <p class="text-gray-600 text-sm">Watermark totalement inaudible</p>
+                </div>
+
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-20 h-20 bg-green-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-clock text-2xl text-green-600"></i>
+                    </div>
+                    <div class="stats-counter text-4xl font-bold text-green-600 mb-2" data-target="2">0</div>
+                    <h3 class="font-semibold mb-2">Secondes de Traitement</h3>
+                    <p class="text-gray-600 text-sm">Pour 1 minute d'audio</p>
+                </div>
+
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-20 h-20 bg-orange-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-shield-alt text-2xl text-orange-600"></i>
+                    </div>
+                    <div class="stats-counter text-4xl font-bold text-orange-600 mb-2" data-target="98">0</div>
+                    <h3 class="font-semibold mb-2">% de Robustesse</h3>
+                    <p class="text-gray-600 text-sm">Contre les attaques courantes</p>
+                </div>
+
+                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-20 h-20 bg-red-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-database text-2xl text-red-600"></i>
+                    </div>
+                    <div class="stats-counter text-4xl font-bold text-red-600 mb-2" data-target="1024">0</div>
+                    <h3 class="font-semibold mb-2">Bits de Données</h3>
+                    <p class="text-gray-600 text-sm">Capacité maximale par fichier</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 hero-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-6">Prêt à Protéger Vos Créations ?</h2>
+                <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                    Découvrez comment SonicProof peut révolutionner la protection de vos contenus audio
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="index.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors">
+                        <i class="fas fa-fingerprint mr-2"></i>
+                        
+                        Commencer le watermarking
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white mr-3">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <span class="text-xl font-bold">Sonic<span class="text-primary-400">Proof</span></span>
+                    </div>
+                    <p class="text-gray-300 mb-4 max-w-md">
+                        La solution de référence pour la protection audio par watermarking inaudible. 
+                        Protégez vos créations avec une technologie de pointe.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-primary-400 transition-colors">Accueil</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary-400 transition-colors">À propos</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary-400 transition-colors">Documentation</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Technologies</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-primary-400 transition-colors">HTML5/CSS3</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary-400 transition-colors">JavaScript</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary-400 transition-colors">Python</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary-400 transition-colors">DSP</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">
+                    © 2024 SonicProof. Tous droits réservés.
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-primary-400 text-sm transition-colors">Conditions d'utilisation</a>
+                    <a href="#" class="text-gray-400 hover:text-primary-400 text-sm transition-colors">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            offset: 100,
+            once: true
+        });
+
+        // Stats Counter Animation
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            
+            function updateCounter() {
+                start += increment;
+                if (start < target) {
+                    element.textContent = Math.floor(start);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = target;
+                }
+            }
+            
+            updateCounter();
+        }
+
+        // Intersection Observer for counters
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                    const target = parseInt(entry.target.getAttribute('data-target'));
+                    animateCounter(entry.target, target);
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all counters
+        document.querySelectorAll('.stats-counter').forEach(counter => {
+            observer.observe(counter);
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.md\\:hidden button');
+        const mobileMenu = document.createElement('div');
+        mobileMenu.className = 'md:hidden bg-white shadow-lg absolute top-16 left-0 right-0 z-40';
+        mobileMenu.innerHTML = `
+            <div class="px-4 py-2 space-y-2">
+                <a href="index.html" class="block py-2 text-gray-600 hover:text-primary-600">Accueil</a>
+                <a href="#" class="block py-2 text-primary-600 font-medium">À propos</a>
+                <a href="#" class="block py-2 text-gray-600 hover:text-primary-600">Documentation</a>
+                <a href="#" class="block py-2 text-gray-600 hover:text-primary-600">Contact</a>
+            </div>
+        `;
+
+        let mobileMenuOpen = false;
+        mobileMenuBtn.addEventListener('click', () => {
+            if (!mobileMenuOpen) {
+                document.querySelector('nav').appendChild(mobileMenu);
+                mobileMenuOpen = true;
+            } else {
+                mobileMenu.remove();
+                mobileMenuOpen = false;
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add loading animation
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+    </script>
+</body>
+</html>
