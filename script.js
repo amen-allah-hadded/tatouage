@@ -1,5 +1,5 @@
  // Configuration globale
-        const SERVER_URL = 'https://audio-watermarker-production-328c.up.railway.app/';
+        const SERVER_URL = 'https://audio-watermarker-production-6617.up.railway.app/';
 
         // Configuration Storj (sans exposer les identifiants sensibles)
         let storjConfig = {
@@ -859,4 +859,5 @@
             );
             return await crypto.subtle.sign('HMAC', cryptoKey, encoder.encode(data));
         }
+
 
