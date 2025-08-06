@@ -3,8 +3,8 @@
 
         // Configuration Storj (sans exposer les identifiants sensibles)
         let storjConfig = {
-            accessKey: 'jw7whq6kufg7i6ohuvtogtlytbta',
-            secretKey: 'j3fmiuqic5n37p7iip6aexw3kfpblfflo7e53jzoi7tzjbslza2xc',
+            accessKey: 'jx463vfcabhrgitnwnowlr4k6k5a',
+            secretKey: 'j2ykufmyoxuvja23oeohigbxjczvsntaaxqolnd24w3rlbja3vt7g',
             endpoint: 'https://gateway.storjshare.io',
             bucketName: 'watermark'
         };
@@ -859,3 +859,4 @@
             );
             return await crypto.subtle.sign('HMAC', cryptoKey, encoder.encode(data));
         }
+
